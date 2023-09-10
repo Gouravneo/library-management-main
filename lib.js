@@ -32,7 +32,14 @@ function Deletebook() {
   delbut.addEventListener("click", del);
 
   function del() {
+    if (getElementById("deleteid").value==""){
+      alert("Enter the id")
+    }
     var v = parseInt(getElementById("deleteid").value);
+    console.log("value in input ",v)
+    // if(v==""){
+    //   alert("Enter the id")
+    // }
     console.log("value in del fun ", v);
 
     bklist = bklist.filter((item) => (item.id!=v));
